@@ -14,8 +14,7 @@ public class Q1_1_31 {
 		randomLink(N,p);
 	}
 	public static void randomLink(int N, double p){
-		StdDraw.setCanvasSize();
-		StdDraw.setScale(0, 50);
+		StdDraw.setScale(0, 100);
 		StdDraw.setPenRadius(0.01);
 		StdDraw.setPenColor(StdDraw.RED);
 		StdDraw.circle(50, 50, 50);
