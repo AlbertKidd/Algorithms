@@ -1,4 +1,4 @@
-package Chapter_1_Fundamentals;
+package c1_1_programming_model;
 
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
