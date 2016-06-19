@@ -13,7 +13,6 @@ import edu.princeton.cs.algs4.StdOut;
 public class Q1_2_1 {
 	
 	public static double distance(int N){
-		//ArrayList<Point2D> ps = new ArrayList<Point2D>();
 		Point2D[] ps = new Point2D[N];
 		StdDraw.setPenRadius(0.01);
 		for(int i=0; i<N; i++){
