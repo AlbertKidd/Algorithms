@@ -22,7 +22,7 @@ public class Q1_2_2 {
 			StdOut.println(is[i].toString());
 		}
 		for(int i=0; i<N-1; i++){
-			for(int j=i+1; j<N-1; j++){
+			for(int j=i+1; j<N; j++){
 				if(is[i].intersects(is[j]))
 					StdOut.println(i + "," + j);
 			}
