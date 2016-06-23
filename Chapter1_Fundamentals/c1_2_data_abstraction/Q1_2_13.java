@@ -18,6 +18,17 @@ class Transaction{
 		this.amount = amount;
 	}
 	
+	public Transaction(String who, String when, double amount){
+		this.who = who;
+		this.amount = amount;
+		
+		String[] s = when.split("/");
+		int month = Integer.parseInt(s[0]);
+		int day = Integer.parseInt(s[1]);
+		int year = Integer.parseInt(s[2]);
+		this.when = new Date(month, day, year);
+	}
+	
 	String who(){
 		return who;
 	}
