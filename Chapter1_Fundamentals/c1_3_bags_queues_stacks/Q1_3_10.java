@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.Stack;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-//编写一个过滤器InfixToPostFix
+//编写一个过滤器InfixToPostfix
 
 public class Q1_3_10 {
 	public void main(String[] args){
