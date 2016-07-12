@@ -3,7 +3,7 @@ package c1_3_bags_queues_stacks;
 import java.util.Iterator;
 
 public class LinkedList<T>{
-	private int N;
+	public int N;
 	public Node first;
 	public Node last;
 	
