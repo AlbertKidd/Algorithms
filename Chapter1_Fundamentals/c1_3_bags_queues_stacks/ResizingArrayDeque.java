@@ -9,10 +9,10 @@ public class ResizingArrayDeque<Item> {
 	private int right;
 	
 	public ResizingArrayDeque(){
-		list = (Item[])new Object[2];
+		list = (Item[])new Object[3];
 		N = 0;
-		left = 0;
-		right = 0;
+		left = 1;
+		right = 1;
 	}
 	
 	public boolean isEmpty(){
@@ -26,15 +26,72 @@ public class ResizingArrayDeque<Item> {
 	private void resize(int n){
 		assert n >= N;
 		Item[] temp = (Item[])new Object[n];
+		int newLeft = (n - list.length + 1) / 2;
 		for(int i = 0; i < N; i++){
-			temp[i] = list[left + i];
+			temp[newLeft + i] = list[left + i];
 		}
 		list = temp;
-		left = 0;
-		right = N - 1;
+		left = newLeft;
+		right = newLeft + N - 1;
 	}
 	
 	public void pushLeft(Item item){
-		
+		if(N == 0)
+			list[1] = item;
+		else{
+			if(N == list.length - 2)
+				resize(2 * N + 2);
+			else
+				resize(list.length);
+			list[--left] = item;
+		}				
+		N++;
 	}
+	
+	public void pushRight(Item item){
+		if(N == 0)
+			list[1] = item;
+		else{
+			if(N == list.length - 2)
+				resize(2 * N + 2);
+			else
+				resize(list.length);
+			list[++right] = item;
+		}				
+		N++;
+	}
+	
+	public Item popLeft(){
+		Item item = list[left];
+
+		if(isEmpty())
+			throw new RuntimeException("list is empty!");
+		else if(N == (list.length - 2) / 4){
+			resize(list.length/2 - 1);
+			if(N == 1)
+				list[left] = null;
+			else
+				list[left++] = null;
+		}
+		N--;
+		return item;
+	}
+	
+	public Item popRight(){
+		Item item = list[right];
+
+		if(isEmpty())
+			throw new RuntimeException("list is empty!");
+		else if(N == (list.length - 2) / 4){
+			resize(list.length/2 - 1);
+			if(N == 1)
+				list[right] = null;
+			else
+				list[right--] = null;
+		}
+		N--;
+		return item;
+	}
+	
+	
 }
