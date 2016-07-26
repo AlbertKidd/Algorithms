@@ -1,8 +1,10 @@
 package c1_3_bags_queues_stacks;
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Random;
 
-public class RandomQueue<Item> {
+public class RandomQueue<Item> implements Iterable<Item>{
 	private int N;
 	private int first;
 	private Item[] list;
@@ -53,5 +55,36 @@ public class RandomQueue<Item> {
 		}
 		list = temp;
 		first = 0;
+	}
+	
+	@Override
+	public Iterator<Item> iterator(){
+		return new ArrayIterator();
+	}
+	
+	private class ArrayIterator implements Iterator<Item>{
+		private int i = 0;
+		
+		public ArrayIterator(){
+			randomSort();
+		}
+		
+		private void randomSort(){
+			for(int i = 0; i < N; i++){
+				int randIndex = i + rand.nextInt(N - i);
+				Item item = list[i];
+				list[i] = list[randIndex];
+				list[randIndex] = item;
+			}
+		}
+		
+		public boolean hasNext(){
+			return i < N;
+		}
+		public Item next(){
+			if(!hasNext())
+				throw new NoSuchElementException();
+			return list[i++];
+		}
 	}
 }
