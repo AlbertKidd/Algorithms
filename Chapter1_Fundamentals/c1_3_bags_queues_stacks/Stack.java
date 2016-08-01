@@ -80,4 +80,14 @@ public class Stack<Item> {
 		return item;
 		
 	}
+	
+	
+	public void catenation(Stack s){
+		Node n = this.first;
+		for(int i = 0; i < this.size() - 1; i++){
+			n = n.next;
+		}
+		n.next = s.first;
+		N = N + s.size();
+	}
 }
