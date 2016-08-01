@@ -7,19 +7,19 @@ import java.util.List;
 import edu.princeton.cs.algs4.StdOut;
 
 public class FileList {
-	private List<File> d = new ArrayList<File>();;
+	private Queue<File> d = new Queue<File>();;
 	
 	public void readFile(File file){ 
 		for(File f : file.listFiles()){
 			if(f.isDirectory()){
-				d.add(f);
+				d.enqueue(f);
 				readFile(f);
 			}else
-				d.add(f);
+				d.enqueue(f);
 		}
 	}
 	public void outputFile(File file){
 		readFile(file);
-		StdOut.println(d);
+		d.print();
 	}
 }
