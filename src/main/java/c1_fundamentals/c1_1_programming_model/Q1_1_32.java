@@ -1,13 +1,14 @@
 package c1_fundamentals.c1_1_programming_model;
 
-import edu.princeton.cs.algs4.StdDraw;
-import edu.princeton.cs.algs4.StdOut;
-import edu.princeton.cs.algs4.StdRandom;
 
 //直方图。
 //假设标准输入流中含有一系列double 值。
 //编写一段程序，从命令行接受一个整数N 和两个double 值l 和r。
 //将(l，r) 分为N 段并使用StdDraw 画出输入流中的值落入每段的数量的直方图。
+
+import edu.princeton.cs.introcs.StdDraw;
+import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.introcs.StdRandom;
 
 public class Q1_1_32 {
 	public static void main(String[] args){

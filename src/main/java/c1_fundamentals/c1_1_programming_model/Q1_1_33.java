@@ -1,6 +1,5 @@
 package c1_fundamentals.c1_1_programming_model;
 
-import edu.princeton.cs.algs4.StdOut;
 
 //矩阵库。
 //编写一个Matrix 库并实现以下API： 
@@ -13,6 +12,8 @@ static double[] mult(double[][] a, double[] x) //矩阵和向量之积 
 static double[] mult(double[] y, double[][] a) //向量和矩阵之积 
 编写一个测试用例，从标准输入读取矩阵并测试所有方法。
 */
+
+import edu.princeton.cs.introcs.StdOut;
 
 public class Q1_1_33 {
 	public static void main(String[] args){

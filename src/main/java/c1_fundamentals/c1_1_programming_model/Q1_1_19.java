@@ -1,7 +1,5 @@
 package c1_fundamentals.c1_1_programming_model;
 
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
 
 /*在计算机上运行以下程序：
  * public class Fibonacci { 
@@ -11,6 +9,9 @@ import edu.princeton.cs.algs4.StdOut;
 			for (int N = 0; N < 100; N++) StdOut.println(N + " " + F(N)); } } 
 计算机用这段程序在一个小时之内能够得到F(N) 结果的最大N 值是多少？开发F(N) 的一 个更好的实现，用数组保存已经计算过的值。
 */
+
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
 
 public class Q1_1_19 {
 	public static void main(String[] args){

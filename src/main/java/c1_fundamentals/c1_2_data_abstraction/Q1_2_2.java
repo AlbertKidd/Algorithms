@@ -1,11 +1,12 @@
 package c1_fundamentals.c1_2_data_abstraction;
 
-import edu.princeton.cs.algs4.Interval1D;
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
 
 //编写一个Interval1D的用例，从命令行接受一个整数N。
 //从标准输入中读取N个间隔（每个间隔由一对double值定义）并打印出所有相交的间隔对。
+
+import edu.princeton.cs.algorithms.Interval1D;
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
 
 public class Q1_2_2 {
 	public static void main(String[] args){

@@ -1,6 +1,5 @@
 package c1_fundamentals.c1_1_programming_model;
 
-import edu.princeton.cs.algs4.StdOut;
 
 /*
 模拟掷骰子。
@@ -16,6 +15,8 @@ dist[i] 的值就是两个骰子之和为i 的概率。
 用实验模拟N 次掷骰子，并在计算两个1 到 6 之间的随机整数之和时记录每个值的出现频率以验证它们的概率。
 N 要多大才能够保证你的经验数据和准确数据的吻合程度达到小数点后三位？
 */
+
+import edu.princeton.cs.introcs.StdOut;
 
 public class Q1_1_35 {
 	public static void main(String[] args){

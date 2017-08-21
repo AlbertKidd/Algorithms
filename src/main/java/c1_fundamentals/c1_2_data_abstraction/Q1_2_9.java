@@ -1,10 +1,11 @@
 package c1_fundamentals.c1_2_data_abstraction;
 
-import edu.princeton.cs.algs4.Counter;
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
 
 //修改BinarySearch,使用Counter统计在有查找中被检查的键的总数并在查找全部结束后打印该值。
+
+import edu.princeton.cs.algorithms.Counter;
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
 
 public class Q1_2_9 {
 	public static void main(String[] args){

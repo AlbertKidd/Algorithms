@@ -1,10 +1,10 @@
 package c1_fundamentals.c1_3_bags_queues_stacks;
 
-import edu.princeton.cs.algs4.Stack;
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
 
 //编写一段程序，从标准输入得到一个缺少左括号的表达式并打印出补全括号之后的中序表达式。
+
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
 
 public class Q1_3_9 {
 	

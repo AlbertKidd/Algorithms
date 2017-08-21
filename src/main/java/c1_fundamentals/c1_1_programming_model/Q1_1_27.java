@@ -1,7 +1,5 @@
 package c1_fundamentals.c1_1_programming_model;
 
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
 
 //二项分布。
 //估计用以下代码计算binomial(100, 50) 将会产生的递归调用次数： 
@@ -9,6 +7,9 @@ import edu.princeton.cs.algs4.StdOut;
 //		if (N == 0 && k == 0) return 1.0; and if (N < 0 || k < 0) return 0.0; 
 //		return (1.0 - p)*binomial(N-1, k, p) + p*binomial(N-1, k-1); } 
 //将已经计算过的值保存在数组中并给出一个更好的实现。
+
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
 
 public class Q1_1_27 {
 	public static void main(String[] args){

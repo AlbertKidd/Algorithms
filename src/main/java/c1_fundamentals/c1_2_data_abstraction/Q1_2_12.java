@@ -1,9 +1,10 @@
 package c1_fundamentals.c1_2_data_abstraction;
 
-import edu.princeton.cs.algs4.StdOut;
 
 //为SmartDate添加一个方法dayOfTheWeek()，为日期中每周的日返回Monday、Tuesday、Wednesday、Thursday、Friday、Saturday或Sunday中的适当值。
 //你可以假定时间是21世纪。
+
+import edu.princeton.cs.introcs.StdOut;
 
 public class Q1_2_12 {
 	public static void main(String[] args){

@@ -1,8 +1,9 @@
 package c1_fundamentals.c1_2_data_abstraction;
 
-import edu.princeton.cs.algs4.Date;
 
 //用我们对Date的实现（请见表1.2.12）作为模版实现Transaction类型。
+
+import edu.princeton.cs.algorithms.Date;
 
 public class Q1_2_13 {
 

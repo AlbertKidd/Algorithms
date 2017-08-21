@@ -1,8 +1,9 @@
 package c1_fundamentals.c1_1_programming_model;
 
-import java.util.ArrayList;
 
-import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.introcs.StdOut;
+
+import java.util.ArrayList;
 
 public class Q1_1_28 {
 	

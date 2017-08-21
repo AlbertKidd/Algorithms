@@ -1,6 +1,5 @@
 package c1_fundamentals.c1_3_bags_queues_stacks;
 
-import java.util.Iterator;
 
 public class LinkedList<T>{
 	public int N;

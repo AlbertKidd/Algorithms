@@ -1,11 +1,13 @@
 package c1_fundamentals.c1_1_programming_model;
 
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
-import edu.princeton.cs.algs4.StdRandom;
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.introcs.StdRandom;
+import lombok.extern.slf4j.Slf4j;
 
 //编写一段代码，打印出一个二维布尔数组的内容。其中，使用* 表示真，空格表示假。打印出行号和列号。
 
+@Slf4j
 public class Q1_1_11 {
 	public static void main(String[] args){
 		boolean[][] b = new boolean[StdIn.readInt()][StdIn.readInt()];

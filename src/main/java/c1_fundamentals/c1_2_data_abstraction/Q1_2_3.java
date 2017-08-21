@@ -1,14 +1,15 @@
 package c1_fundamentals.c1_2_data_abstraction;
 
-import edu.princeton.cs.algs4.Counter;
-import edu.princeton.cs.algs4.Interval1D;
-import edu.princeton.cs.algs4.Interval2D;
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
 
 //编写一个Interval2D的用例，从命令行接受参数N，min和max。
 //生成N个随机的2D间隔，其宽和高均匀地分布在单位正方形中的min和max中间。
 //用StdDraw画出它们并打印出相交的间隔对的数量以及有包含关系的间隔对数量。
+
+import edu.princeton.cs.algorithms.Counter;
+import edu.princeton.cs.algorithms.Interval1D;
+import edu.princeton.cs.algorithms.Interval2D;
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
 
 public class Q1_2_3 {
 	public static void main(String[] args){

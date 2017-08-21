@@ -1,10 +1,10 @@
 package c1_fundamentals.c1_3_bags_queues_stacks;
 
-import edu.princeton.cs.algs4.Date;
-import edu.princeton.cs.algs4.In;
-import edu.princeton.cs.algs4.Queue;
 
 //使用1.3.1.5节中的readInts()作为模版为Date编写一个静态方法readDates()，从标准输入中读取由1.2.19的表格所指定的格式的多个日期并返回它们的一个数组。
+
+import edu.princeton.cs.algorithms.Date;
+import edu.princeton.cs.introcs.In;
 
 public class Q1_3_16 {
 	public static Date[] readDates(String[] args){

@@ -1,10 +1,11 @@
 package c1_fundamentals.c1_1_programming_model;
 
-import edu.princeton.cs.algs4.StdOut;
 
 //使用1.1.6.4 节中的rank() 递归方法重新实现BinarySearch 并跟踪该方法的调用。
 //每当该方法被调用时，打印出它的参数lo 和hi 并按照递归的深度缩进。
 //提示：为递归方法添加一个参数来保存递归的深度。
+
+import edu.princeton.cs.introcs.StdOut;
 
 public class Q1_1_22 {
 	static String s = "";

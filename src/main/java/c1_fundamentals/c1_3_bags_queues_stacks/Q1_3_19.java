@@ -1,8 +1,7 @@
 package c1_fundamentals.c1_3_bags_queues_stacks;
 
-import java.util.NoSuchElementException;
 
-import edu.princeton.cs.algs4.Queue;
+import java.util.NoSuchElementException;
 
 public class Q1_3_19 {
 	
