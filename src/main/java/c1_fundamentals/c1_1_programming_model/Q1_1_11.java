@@ -11,9 +11,9 @@ import lombok.extern.slf4j.Slf4j;
 public class Q1_1_11 {
 	public static void main(String[] args){
 		boolean[][] b = new boolean[StdIn.readInt()][StdIn.readInt()];
-		initial(b);
+		init(b);
 		StdOut.print("+++++ ");
-		for(int x=0; x<getColums(b); x++){
+		for(int x = 0; x< getMaxColumnNum(b); x++){
 			StdOut.print("column" + x + " ");
 		}
 		StdOut.println();
@@ -26,25 +26,27 @@ public class Q1_1_11 {
 		}
 				
 	}
-	private static boolean[][] initial(boolean[][] b){
+
+	private static void init(boolean[][] b){
 		for(int i=0; i<b.length; i++){
 			for(int j=0; j<b[i].length; j++)
 				b[i][j] = StdRandom.bernoulli();
 		}
-		return b;
 	}
+
 	private static String trans(boolean b){
 		if(b)
 			return "*";
 		else
 			return "-";
 	}
-	private static int getColums(boolean[][] b){
-		int columns = 0;
-		for(int i=0; i<b.length; i++){
-			if(b[i].length > columns)
-				columns = b[i].length;
+
+	private static int getMaxColumnNum(boolean[][] b){
+		int maxColumnNum = 0;
+		for(boolean[] a : b){
+			if(a.length > maxColumnNum)
+				maxColumnNum = a.length;
 		}
-		return columns;
+		return maxColumnNum;
 	}
 }
