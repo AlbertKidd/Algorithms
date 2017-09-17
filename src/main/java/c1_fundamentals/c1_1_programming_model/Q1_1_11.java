@@ -12,13 +12,12 @@ public class Q1_1_11 {
 	public static void main(String[] args){
 		boolean[][] b = new boolean[StdIn.readInt()][StdIn.readInt()];
 		init(b);
-		StdOut.print("+++++ ");
-		for(int x = 0; x< getMaxColumnNum(b); x++){
-			StdOut.print("column" + x + " ");
-		}
+		StdOut.print("       ");
+		for(int x = 0; x< b[0].length; x++)
+			StdOut.print("c" + x + "     ");
 		StdOut.println();
 		for(int i=0; i<b.length; i++){
-			StdOut.print("line" + i + " ");
+			StdOut.print("r" + i + " ");
 			for(int j=0; j<b[i].length; j++){
 				StdOut.print("   " + trans(b[i][j]) + "    ");
 			}
@@ -39,14 +38,5 @@ public class Q1_1_11 {
 			return "*";
 		else
 			return "-";
-	}
-
-	private static int getMaxColumnNum(boolean[][] b){
-		int maxColumnNum = 0;
-		for(boolean[] a : b){
-			if(a.length > maxColumnNum)
-				maxColumnNum = a.length;
-		}
-		return maxColumnNum;
 	}
 }

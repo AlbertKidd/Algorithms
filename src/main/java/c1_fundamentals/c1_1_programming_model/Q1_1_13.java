@@ -12,9 +12,8 @@ public class Q1_1_13 {
 		int m = StdIn.readInt();
 		int n = StdIn.readInt();
 		int[][] a = new int[m][n];
-		int[][] b = new int[n][m];
 		a = randomInitial(a);
-		b = migrate(a, b);
+		int[][] b = migrate(a);
 	}
 	
 	private static int[][] randomInitial(int[][] x){
@@ -22,22 +21,25 @@ public class Q1_1_13 {
 		for(int i = 0; i < x.length; i++){
 			for(int j = 0; j < x[0].length; j++){
 				x[i][j] = StdRandom.uniform(1024);
-				StdOut.print(x[i][j] + " ");
+				StdOut.printf("%4s", x[i][j]);
 			}
 			StdOut.println();
 		}
 		return x;
 	}
 	
-	private static int[][] migrate(int[][] x, int[][] y){
+	private static int[][] migrate(int[][] x){
+		int rows= x.length;
+		int columns = x[0].length;
+		int[][] result = new int[columns][rows];
 		StdOut.println("转置数组");
-		for(int i = 0; i < y.length; i++){
-			for(int j = 0; j < y[0].length; j++){
-				y[i][j] = x[j][i];
-				StdOut.print(y[i][j] + " ");
+		for(int i = 0; i < columns; i++){
+			for(int j = 0; j < rows; j++){
+				result[i][j] = x[j][i];
+				StdOut.printf("%4s", result[i][j]);
 			}
 			StdOut.println();
 		}
-		return y;
+		return result;
 	}
 }

@@ -13,7 +13,7 @@ public class Q1_1_23 {
 		rank(44, whiteList, 0, whiteList.length - 1, false);
 	}
 	
-	public static int rank(int key, int[] a, int lo, int hi, boolean b){
+	private static int rank(int key, int[] a, int lo, int hi, boolean b){
 		if(lo > hi){
 			if(b)
 				StdOut.println(key);

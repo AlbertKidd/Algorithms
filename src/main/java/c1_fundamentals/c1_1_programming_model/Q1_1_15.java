@@ -12,16 +12,15 @@ public class Q1_1_15 {
 		int M = 7;
 		instogram(a, M);
 	}
-	public static int[] instogram(int[] a, int M){
+
+	private static int[] instogram(int[] a, int M){
 		int[] b = new int[M];
-		int n = 0;
 		for(int i = 0; i < M; i++){
-			for(int j = 0; j < a.length; j++){
-				if(i == a[j]) n++;
-			}
+			int n = 0;
+			for(int j : a)
+				if(i == j) n++;
 			b[i] = n;
 			StdOut.print(b[i] + " ");
-			n = 0;
 		}
 		return b;
 	}

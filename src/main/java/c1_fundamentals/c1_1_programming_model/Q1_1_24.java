@@ -15,7 +15,7 @@ public class Q1_1_24 {
 		StdOut.print(gcd(a, b));
 	}
 	
-	public static int gcd(int p, int q){
+	private static int gcd(int p, int q){
 		StdOut.println(p + " " + q);
 		if(q == 0)
 			return p;

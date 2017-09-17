@@ -7,7 +7,8 @@ package c1_fundamentals.c1_1_programming_model;
 			if (N == 0) return 0; if (N == 1) return 1; return F(N-1) + F(N-2); } 
 		public static void main(String[] args) { 
 			for (int N = 0; N < 100; N++) StdOut.println(N + " " + F(N)); } } 
-计算机用这段程序在一个小时之内能够得到F(N) 结果的最大N 值是多少？开发F(N) 的一 个更好的实现，用数组保存已经计算过的值。
+计算机用这段程序在一个小时之内能够得到F(N) 结果的最大N 值是多少？
+开发F(N) 的一个更好的实现，用数组保存已经计算过的值。
 */
 
 import edu.princeton.cs.introcs.StdIn;
@@ -17,7 +18,8 @@ public class Q1_1_19 {
 	public static void main(String[] args){
 		F(StdIn.readInt());
 	}
-	public static long[] F(int N){
+
+	private static long[] F(int N){
 		long[] a = new long[N];
 		a[0] = 0;
 		a[1] = 1;

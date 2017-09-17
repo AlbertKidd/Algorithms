@@ -10,28 +10,65 @@ import edu.princeton.cs.introcs.StdOut;
 public class Q1_1_29 {
 	public static void main(String[] args){
 		int[] a = {1, 1, 2 , 3 ,3 , 3 , 4, 5 ,6 ,7 };
-		int i = rank(1, a);
+		int i = rank(4, a);
 		StdOut.println(i);
-		int j = count(1, a);
+		int j = count(4, a);
 		StdOut.println(j);
-		for(int x = i; x < i+j; x++){
-			StdOut.println(x);
+	}
+	private static int rank(int key, int[] a){
+		int nearKey = searchNearKey(a, key);
+		if (key > a[nearKey]){
+			return nearKey + 1;
+		}else if (key < a[nearKey]){
+			return nearKey;
+		}else {
+			while (nearKey >= 0 && key == a[nearKey]) nearKey--;
+			return nearKey + 1;
 		}
 	}
-	public static int rank(int key, int[] a){
-		int n = 0;
-		for(int i : a){
-			if(a[i] < a[key])
+
+	private static int count(int key, int[] a){
+		int searchedKey = searchKey(a, key);
+		if (searchedKey == -1){
+			return 0;
+		}else {
+			int n = 1;
+			int pre = searchedKey - 1;
+			while (pre >= 0 && key == a[pre]){
 				n++;
+				pre = pre - 1;
+			}
+			int after = searchedKey + 1;
+			while (key < a.length && key == a[after] ){
+				n++;
+				after = after + 1;
+			}
+			return n;
 		}
-		return n;
 	}
-	public static int count(int key, int[] a){
-		int n = 0;
-		for(int i : a){
-			if(a[i] == a[key])
-				n++;
+
+	private static int searchKey(int[] a, int value){
+		int lo = 0;
+		int hi = a.length;
+		while (lo < hi){
+			int mid = lo + (hi - lo) / 2;
+			if (value > a[mid]) lo = mid + 1;
+			else if (value < a[mid]) hi = mid - 1;
+			else return mid;
 		}
-		return n;
+		return -1;
+	}
+
+	private static int searchNearKey(int[] a, int value){
+		int lo = 0;
+		int hi = a.length;
+		int mid = 0;
+		while (lo < hi){
+			mid = lo + (hi - lo) / 2;
+			if (value < a[mid]) hi = mid - 1;
+			else if (value > a[mid]) lo = mid + 1;
+			else return mid;
+		}
+		return mid;
 	}
 }

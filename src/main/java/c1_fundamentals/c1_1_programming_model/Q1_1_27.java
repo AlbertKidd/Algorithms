@@ -17,8 +17,14 @@ public class Q1_1_27 {
 		int k = StdIn.readInt();
 		double p = StdIn.readDouble();
 		// TODO: 2017/9/5 add a clock
+
+		long begin1 = System.currentTimeMillis();
 		StdOut.println(binomial(n, k, p));
+		StdOut.print("binomial 共计耗时：" + (System.currentTimeMillis() - begin1) + "ms");
+
+		long begin2 = System.currentTimeMillis();
 		StdOut.print(optimizedBinomial(n, k, p));
+		StdOut.print("optimizedBinomial 共计耗时：" + (System.currentTimeMillis() - begin2) + "ms");
 	}
 
 	private static double binomial(int n, int k, double p){

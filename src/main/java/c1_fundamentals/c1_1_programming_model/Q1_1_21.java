@@ -12,7 +12,8 @@ public class Q1_1_21 {
 	public static void main(String[] args){
 		printTable();
 	}
-	public static void printTable(){
+
+	private static void printTable(){
 		while(StdIn.hasNextLine()){
 			String name = StdIn.readString();
 			int a = StdIn.readInt();
@@ -20,7 +21,6 @@ public class Q1_1_21 {
 			StdOut.print("name:" + name + " " + "ScoreA:" + a + " " + "ScoreB:" + b + " ");
 			StdOut.printf("%.3f", (double)a/b);
 		}
-			
 	}
 }
 

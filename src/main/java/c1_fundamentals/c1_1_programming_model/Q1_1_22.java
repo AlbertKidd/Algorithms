@@ -14,10 +14,12 @@ public class Q1_1_22 {
 		int b = rank(46, a);
 		StdOut.print(b);
 	}
-	public static int rank(int key, int[] a){
+
+	private static int rank(int key, int[] a){
 		return rank(key, a, 0, a.length-1);
 	}
-	public static int rank(int key, int[] a, int lo, int hi){
+
+	private static int rank(int key, int[] a, int lo, int hi){
 		StdOut.println(s + lo + "," + hi);
 		s += "  ";
 		if(lo > hi){

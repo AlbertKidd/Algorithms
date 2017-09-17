@@ -12,7 +12,7 @@ public class Q1_1_20 {
 		StdOut.println(factorialLn1(i));
 	}
 	
-	public static double factorialLn1(int N){
+	private static double factorialLn1(int N){
 		if(N > 1)
 			return Math.log(N) + factorialLn1(N-1);
 		else
