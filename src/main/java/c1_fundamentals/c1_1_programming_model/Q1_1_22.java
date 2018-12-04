@@ -5,7 +5,7 @@ package c1_fundamentals.c1_1_programming_model;
 //每当该方法被调用时，打印出它的参数lo 和hi 并按照递归的深度缩进。
 //提示：为递归方法添加一个参数来保存递归的深度。
 
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_1_22 {
 	static String s = "";

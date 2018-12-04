@@ -3,8 +3,8 @@ package c1_fundamentals.c1_3_bags_queues_stacks;
 
 //编写一个过滤器InfixToPostfix
 
-import edu.princeton.cs.introcs.StdIn;
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_3_10 {
 	public void main(String[] args){

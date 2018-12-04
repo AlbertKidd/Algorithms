@@ -5,8 +5,8 @@ package c1_fundamentals.c1_1_programming_model;
 //扩展该算法中的代码得到一个程序Euclid，从命令行接受两个参数，计算它们的最大公约数并打印出每次调用递归方法时的两个参数。
 //使用你的程序计算1111111和1234567的最大公约数。
 
-import edu.princeton.cs.introcs.StdIn;
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_1_24 {
 	public static void main(String[] args){

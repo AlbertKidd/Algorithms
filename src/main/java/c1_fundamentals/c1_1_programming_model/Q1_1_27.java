@@ -8,8 +8,8 @@ package c1_fundamentals.c1_1_programming_model;
 //		return (1.0 - p)*binomial(N-1, k, p) + p*binomial(N-1, k-1); } 
 //将已经计算过的值保存在数组中并给出一个更好的实现。
 
-import edu.princeton.cs.introcs.StdIn;
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_1_27 {
 	public static void main(String[] args){

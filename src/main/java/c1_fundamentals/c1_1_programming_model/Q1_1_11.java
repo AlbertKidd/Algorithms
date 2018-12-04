@@ -1,11 +1,11 @@
 package c1_fundamentals.c1_1_programming_model;
 
-import edu.princeton.cs.introcs.StdIn;
-import edu.princeton.cs.introcs.StdOut;
-import edu.princeton.cs.introcs.StdRandom;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdRandom;
 
 /**
- * 编写一段代码，打印出一个二维布尔数组的内容。其中，使用*表示真，-表示假。打印出行号和列号。
+ * 1.1.11 编写一段代码，打印出一个二维布尔数组的内容。其中，使用*表示真，-表示假。打印出行号和列号。
  */
 public class Q1_1_11 {
 
@@ -33,9 +33,9 @@ public class Q1_1_11 {
 		StdOut.println("请输入数组列数：");
 		int columns = StdIn.readInt();
 		boolean[][] b = new boolean[rows][columns];
-		for (boolean[] row : b){
-			for (boolean value : row){
-				value = StdRandom.bernoulli();
+		for (int i = 0; i < rows; i++){
+			for (int j = 0; j < columns; j++){
+				b[i][j] = StdRandom.bernoulli();
 			}
 		}
 		return b;

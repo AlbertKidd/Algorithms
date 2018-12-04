@@ -1,10 +1,9 @@
 package c1_fundamentals.c1_1_programming_model;
 
 
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdOut;
 
 import java.util.ArrayList;
-import java.util.List;
 
 //删除重复元素
 //修改BinarySearch类中的测试用例来删去排序之后白名单中的所有重复元素

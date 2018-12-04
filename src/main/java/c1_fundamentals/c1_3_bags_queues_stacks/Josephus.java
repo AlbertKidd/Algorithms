@@ -1,8 +1,8 @@
 package c1_fundamentals.c1_3_bags_queues_stacks;
 
 
-import edu.princeton.cs.introcs.StdIn;
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Josephus {
 	public static void main(String[] args){

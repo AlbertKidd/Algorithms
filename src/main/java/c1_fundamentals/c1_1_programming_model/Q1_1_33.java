@@ -13,7 +13,7 @@ static double[] mult(double[] y, double[][] a) //向量和矩阵之积 
 编写一个测试用例，从标准输入读取矩阵并测试所有方法。
 */
 
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_1_33 {
 	public static void main(String[] args){

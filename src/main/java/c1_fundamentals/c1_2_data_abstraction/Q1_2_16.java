@@ -4,7 +4,7 @@ package c1_fundamentals.c1_2_data_abstraction;
 //有理数。
 //为有理数实现一个不可变数据类型Rational,支持加减乘除操作。
 
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_2_16 {
 	

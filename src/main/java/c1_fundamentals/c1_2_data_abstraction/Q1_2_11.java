@@ -3,7 +3,7 @@ package c1_fundamentals.c1_2_data_abstraction;
 
 //根据Date的API实现一个SmartDate类型， 在日期非法时抛出一个异常
 
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_2_11 {
 	public static void main(String[] args){

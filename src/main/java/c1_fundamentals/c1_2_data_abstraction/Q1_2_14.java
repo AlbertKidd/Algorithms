@@ -3,7 +3,7 @@ package c1_fundamentals.c1_2_data_abstraction;
 
 //用我们对Date中的equals()方法的实现(请见1.2.5.8节中的Date类代码框)作为模版，实现Transaction中的equals()方法。
 
-import edu.princeton.cs.algorithms.Date;
+import edu.princeton.cs.algs4.Date;
 
 public class Q1_2_14 {
 

@@ -16,7 +16,7 @@ dist[i] 的值就是两个骰子之和为i 的概率。
 N 要多大才能够保证你的经验数据和准确数据的吻合程度达到小数点后三位？
 */
 
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_1_35 {
 	public static void main(String[] args){

@@ -3,8 +3,8 @@ package c1_fundamentals.c1_3_bags_queues_stacks;
 
 //编写一段程序EvaluatePostfix，从标准输入中得到一个后序表达式，求值并打印结果。
 
-import edu.princeton.cs.introcs.StdIn;
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_3_11 {
 	public static void main(String[] args){

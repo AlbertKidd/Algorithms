@@ -1,6 +1,6 @@
 package c1_fundamentals.c1_3_bags_queues_stacks;
 
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdOut;
 
 public class MoveToFront<Item> {
 	private int N;

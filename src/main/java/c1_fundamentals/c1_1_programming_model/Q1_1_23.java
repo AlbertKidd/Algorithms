@@ -4,7 +4,7 @@ package c1_fundamentals.c1_1_programming_model;
 //为BinarySearch 的测试用例添加一个参数：
 //+ ,打印出标准输入中不在白名单上的值；-，则打印出标准输入中在白名单上的值。
 
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_1_23 {
 	

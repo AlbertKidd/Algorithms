@@ -11,8 +11,9 @@ package c1_fundamentals.c1_1_programming_model;
 开发F(N) 的一个更好的实现，用数组保存已经计算过的值。
 */
 
-import edu.princeton.cs.introcs.StdIn;
-import edu.princeton.cs.introcs.StdOut;
+
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_1_19 {
 	public static void main(String[] args){

@@ -4,9 +4,9 @@ package c1_fundamentals.c1_1_programming_model;
 //随机连接。
 //编写一段程序，从命令行接受一个整数N 和double 值p（0 到1 之间）作为参数，在一个圆上画出大小为0.05 且间距相等的N 个点，然后将每对点按照概率p 用灰线连接。
 
-import edu.princeton.cs.introcs.StdDraw;
-import edu.princeton.cs.introcs.StdIn;
-import edu.princeton.cs.introcs.StdRandom;
+import edu.princeton.cs.algs4.StdDraw;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdRandom;
 
 public class Q1_1_31 {
 	public static void main(String[] args){

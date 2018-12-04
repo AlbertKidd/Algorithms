@@ -5,8 +5,8 @@ package c1_fundamentals.c1_1_programming_model;
 //然后用printf() 打印一张表格，每行的若干列数据包括名字、两个整数和第一个整数除以第二个整数的结果，精确到小数点后三位。
 //可以用这种程序将棒球球手的击球命中率或者学生的考试分数制成表格。
 
-import edu.princeton.cs.introcs.StdIn;
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_1_21 {
 	public static void main(String[] args){

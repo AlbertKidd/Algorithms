@@ -3,8 +3,8 @@ package c1_fundamentals.c1_1_programming_model;
 
 //数组练习。编写一段程序，创建一个N×N 的布尔数组a[][]。其中当i 和j 互质时（没有相同因子），a[i][j] 为true，否则为false。
 
-import edu.princeton.cs.introcs.StdIn;
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_1_30 {
 	public static void main(String[] args){

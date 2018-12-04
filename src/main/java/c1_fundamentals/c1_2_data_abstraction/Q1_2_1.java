@@ -4,10 +4,10 @@ package c1_fundamentals.c1_2_data_abstraction;
 //编写一个Point2D的用例，从命令行接受一个整数N。
 //在单位正方形内生成N个随机点，然后计算两点之间的最近距离。
 
-import edu.princeton.cs.algorithms.Point2D;
-import edu.princeton.cs.introcs.StdDraw;
-import edu.princeton.cs.introcs.StdIn;
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.Point2D;
+import edu.princeton.cs.algs4.StdDraw;
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_2_1 {
 	

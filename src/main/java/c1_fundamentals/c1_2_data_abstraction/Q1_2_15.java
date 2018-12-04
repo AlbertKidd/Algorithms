@@ -4,7 +4,7 @@ package c1_fundamentals.c1_2_data_abstraction;
 //文件输入。
 //基于String的split()方法实现In中的静态方法readInts()。
 
-import edu.princeton.cs.introcs.In;
+import edu.princeton.cs.algs4.In;
 
 public class Q1_2_15 {
 	public static int[] readInts(){

@@ -1,8 +1,8 @@
 package c1_fundamentals.c1_2_data_abstraction;
 
 
-import edu.princeton.cs.introcs.StdDraw;
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.StdDraw;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Q1_2_10 {
 	
