@@ -14,11 +14,10 @@ import edu.princeton.cs.algs4.StdRandom;
 public class Q1_1_15 {
 
 	public static void main(String[] args){
-		StdOut.println("请输入参数m：");
-		int m = StdIn.readInt();
-		int[] arr = init(m);
-
-		int[] result = instogram(arr, m);
+		int[] arr = init();
+		StdOut.println("请输入结果数组的大小：");
+		int size = StdIn.readInt();
+		int[] result = histogram(arr, size);
 		StdOut.print("结果数组为：");
 		Printer.print(result);
 		int plusResult = 0;
@@ -27,34 +26,40 @@ public class Q1_1_15 {
 		}
 		StdOut.printf("结果数组元素之和为：%s", plusResult);
 
-
 	}
 
 	/**
-	 * 初始化一个数组，其中元素不大于传入的参数
-	 * @param m
+	 *
 	 * @return
 	 */
-	private static int[] init(int m){
+	private static int[] init(){
 		StdOut.println("请输入初始数组的大小：");
 		int size = StdIn.readInt();
 		int[] arr = new int[size];
 		for (int i = 0; i < size; i++){
-			arr[i] = StdRandom.uniform(m);
+			arr[i] = StdRandom.uniform(8);
 		}
-		StdOut.printf("生成的数组为：%s", arr);
+		StdOut.println("生成的数组为：");
+		Printer.print(arr);
 		return arr;
 	}
 
-	private static int[] instogram(int[] a, int M){
-		int[] b = new int[M];
-		for(int i = 0; i < M; i++){
-			int n = 0;
-			for(int j : a)
-				if(i == j) n++;
-			b[i] = n;
-			StdOut.print(b[i] + " ");
+	/**
+	 * 接受一个整型数组arr[] 和一个整数size为参数并返回一个大小为M的数组，其中第i个元素的值为整数i在参数数组中出现的次数
+	 * @param arr
+	 * @param size
+	 * @return
+	 */
+	private static int[] histogram(int[] arr, int size){
+
+		int[] result = new int[size];
+		for (int i = 0; i < size; i++){
+			for (int j = 0; j < size; j++){
+				if (arr[j] == i){
+					result[i]++;
+				}
+			}
 		}
-		return b;
+		return result;
 	}
 }
