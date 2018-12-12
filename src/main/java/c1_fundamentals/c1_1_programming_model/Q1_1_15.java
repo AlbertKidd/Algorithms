@@ -6,6 +6,7 @@ import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
 /**
+ * 1.1.15
  * 编写一个静态方法histogram()，接受一个整型数组a[] 和一个整数M 为参数并返回一个大小为M的数组，
  * 其中第i个元素的值为整数i在参数数组中出现的次数。
  *

@@ -5,7 +5,8 @@ import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
 /**
- * 1.1.13 编写一段代码，打印出一个M 行N 列的二维数组的转置（交换行和列）。
+ * 1.1.13
+ * 编写一段代码，打印出一个M 行N 列的二维数组的转置（交换行和列）。
  */
 public class Q1_1_13 {
 

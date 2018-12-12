@@ -1,33 +1,49 @@
 package c1_fundamentals.c1_1_programming_model;
 
+import common.Printer;
+import common.RandomArray;
+import edu.princeton.cs.algs4.*;
 
-//为BinarySearch 的测试用例添加一个参数：
-//+ ,打印出标准输入中不在白名单上的值；-，则打印出标准输入中在白名单上的值。
-
-import edu.princeton.cs.algs4.StdOut;
-
+/**
+ * 1.1.23
+ * 为BinarySearch 的测试用例添加一个参数b：
+ * true ,打印出标准输入中不在白名单上的值；
+ * false ,则打印出标准输入中在白名单上的值。
+ */
 public class Q1_1_23 {
 	
 	public static void main(String[] args){
-		int[] whiteList = {1, 5, 23, 34, 44, 45, 54, 56, 57, 75, 94};
-		rank(44, whiteList, 0, whiteList.length - 1, false);
+		StdOut.println("请输入白名单的大小：");
+		int size = StdIn.readInt();
+		int[] whiteList = RandomArray.generate(size);
+		StdOut.println("白名单为：");
+		Printer.print(whiteList);
+		// readLine以读取下一行
+		StdIn.readLine();
+		printTest(whiteList, true);
+		printTest(whiteList, false);
 	}
-	
-	private static int rank(int key, int[] a, int lo, int hi, boolean b){
-		if(lo > hi){
-			if(b)
-				StdOut.println(key);
-			return -1;
+
+	/**
+	 * 打印标准输入数字中在/不在白名单上的值
+	 * @param arr
+	 * @param b
+	 */
+	private static void printTest(int[] arr, boolean b){
+		StdOut.println("请输入需要查找的值，以空格分隔：");
+		String s = StdIn.readLine();
+		String[] split = s.split(" ");
+		int[] keys = new int[split.length];
+		for (int i = 0; i < split.length; i++){
+			keys[i] = Integer.parseInt(split[i]);
 		}
-		int mid = lo + (hi - lo)/2;
-		if(key > a[mid])
-			return rank(key, a, mid + 1, hi, b);
-		else if(key < a[mid])
-			return rank(key, a, lo, mid - 1, b);
-		else{
-			if(!b)
-				StdOut.println(key);
-			return key;
+		StdOut.printf("以下输入值%s在白名单上：%n", b ? "不" : "");
+		for (int key : keys){
+			int index = BinarySearch.indexOf(arr, key);
+			if ((index == -1 && b) || (index != -1 && !b)){
+				StdOut.printf("%s ", key);
+			}
 		}
+		StdOut.println();
 	}
 }

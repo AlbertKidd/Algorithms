@@ -4,6 +4,7 @@ import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 /**
+ * 1.1.20
  * 编写一个递归的静态方法计算ln(N!) 的值。
  */
 public class Q1_1_20 {
