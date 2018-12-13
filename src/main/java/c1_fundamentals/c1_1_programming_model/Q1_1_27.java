@@ -51,6 +51,9 @@ public class Q1_1_27 {
 	 * @return
 	 */
 	private static double binomialOptimized(int n, int k, double p){
+		if(n < 0 || k < 0){
+			return 0;
+		}
 		double[][] arr = new double[n+1][k+1];
 		arr[0][0] = 1;
 		for (int i = 1; i <= n; i++){

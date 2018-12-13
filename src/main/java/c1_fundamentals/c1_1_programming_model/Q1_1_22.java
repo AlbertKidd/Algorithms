@@ -1,9 +1,10 @@
 package c1_fundamentals.c1_1_programming_model;
 
-import common.Printer;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
+
+import java.util.Arrays;
 
 /**
  * 1.1.22
@@ -17,8 +18,7 @@ public class Q1_1_22 {
 		StdOut.println("请输入初始数组的大小：");
 		int size = StdIn.readInt();
 		int[] array = initArray(size);
-		StdOut.println("初始数组为：");
-		Printer.print(array);
+		StdOut.printf("初始数组为：%s%n", Arrays.toString(array));
 		StdOut.println("请输入要查找的整数：");
 		int num = StdIn.readInt();
 		rank(array, num);
@@ -62,49 +62,5 @@ public class Q1_1_22 {
 		}
 		StdOut.printf("数组中不存在此值：%s%n", key);
 		return -1;
-	}
-
-	/**
-	 * 另一种解决方案
-	 */
-	static class AnotherSolution{
-
-		/**
-		 * 查找深度
-		 */
-		private static int depth;
-
-		public static void main(String[] args){
-			StdOut.println("请输入初始数组的大小：");
-			int size = StdIn.readInt();
-			int[] array = initArray(size);
-			StdOut.println("初始数组为：");
-			Printer.print(array);
-			StdOut.println("请输入要查找的整数：");
-			int num = StdIn.readInt();
-			rank(array, num);
-		}
-
-		private static int rank(int[] arr, int key){
-			return rank(arr, key, 0, arr.length - 1);
-		}
-
-		private static int rank(int[] arr, int key, int low, int high){
-			if (high >= low){
-				StdOut.printf("当前深度：%3s，下限位：%3s，上限位：%3s%n", depth++, low, high);
-				int mid = (low + high) / 2;
-				if (key == arr[mid]){
-					StdOut.printf("%s在数组中为第%s位", key, mid);
-					return mid;
-				}else if (key > arr[mid]){
-					low = mid + 1;
-				}else {
-					high = mid - 1;
-				}
-				return rank(arr, key, low, high);
-			}
-			StdOut.printf("数组中不存在此值：%s%n", key);
-			return -1;
-		}
 	}
 }

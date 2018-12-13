@@ -1,8 +1,9 @@
 package c1_fundamentals.c1_1_programming_model;
 
-import common.Printer;
 import common.RandomArray;
 import edu.princeton.cs.algs4.*;
+
+import java.util.Arrays;
 
 /**
  * 1.1.23
@@ -16,8 +17,7 @@ public class Q1_1_23 {
 		StdOut.println("请输入白名单的大小：");
 		int size = StdIn.readInt();
 		int[] whiteList = RandomArray.generate(size);
-		StdOut.println("白名单为：");
-		Printer.print(whiteList);
+		StdOut.printf("白名单为：%s%n", Arrays.toString(whiteList));
 		// readLine以读取下一行
 		StdIn.readLine();
 		printTest(whiteList, true);

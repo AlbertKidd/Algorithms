@@ -1,9 +1,10 @@
 package c1_fundamentals.c1_1_programming_model;
 
-import common.Printer;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
+
+import java.util.Arrays;
 
 /**
  * 1.1.15
@@ -19,8 +20,7 @@ public class Q1_1_15 {
 		StdOut.println("请输入结果数组的大小：");
 		int size = StdIn.readInt();
 		int[] result = histogram(arr, size);
-		StdOut.print("结果数组为：");
-		Printer.print(result);
+		StdOut.printf("结果数组为：%s%n", Arrays.toString(result));
 		int plusResult = 0;
 		for (int i : result){
 			plusResult += i;
@@ -40,8 +40,7 @@ public class Q1_1_15 {
 		for (int i = 0; i < size; i++){
 			arr[i] = StdRandom.uniform(8);
 		}
-		StdOut.println("生成的数组为：");
-		Printer.print(arr);
+		StdOut.printf("生成的数组为：%s%n", Arrays.toString(arr));
 		return arr;
 	}
 
