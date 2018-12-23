@@ -16,7 +16,7 @@ public class Q1_1_23 {
 	public static void main(String[] args){
 		StdOut.println("请输入白名单的大小：");
 		int size = StdIn.readInt();
-		int[] whiteList = RandomArray.generate(size);
+		int[] whiteList = RandomArray.generate(size, true);
 		StdOut.printf("白名单为：%s%n", Arrays.toString(whiteList));
 		// readLine以读取下一行
 		StdIn.readLine();

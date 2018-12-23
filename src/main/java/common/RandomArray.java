@@ -8,7 +8,7 @@ import edu.princeton.cs.algs4.StdRandom;
 public class RandomArray {
 
     /**
-     * 创建一个指定大小的数组，元素递增排列
+     * 创建一个指定大小的数组
      * @param size
      * @return
      */
