@@ -15,7 +15,7 @@ import java.util.Arrays;
 public class Q1_1_30 {
 
 	public static void main(String[] args){
-		StdOut.println("请输如数组大小N");
+		StdOut.println("请输如数组大小N：");
 		int n = StdIn.readInt();
 		boolean[][] arr = new boolean[n][n];
 		for (int i = 0; i < n; i++){

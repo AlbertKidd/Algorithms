@@ -1,42 +1,59 @@
 package c1_fundamentals.c1_1_programming_model;
 
-
-//随机连接。
-//编写一段程序，从命令行接受一个整数N 和double 值p（0 到1 之间）作为参数，在一个圆上画出大小为0.05 且间距相等的N 个点，然后将每对点按照概率p 用灰线连接。
-
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
+import java.awt.Color;
+
+/**
+ * 1.1.31
+ * 随机连接。
+ * 编写一段程序，从命令行接受一个整数N和double值p（0到1之间）作为参数，
+ * 在一个圆上画出大小为0.05且间距相等的N个点，然后将每对点按照概率p用灰线连接。
+ * 
+ */
 public class Q1_1_31 {
+
 	public static void main(String[] args){
-		int N = StdIn.readInt();
+		StdOut.println("请输入点的数量N：");
+		int n = StdIn.readInt();
+		StdOut.println("请输入连接概率p：");
 		double p = StdIn.readDouble();
-		randomLink(N,p);
+		randomLink2(n, p);
 	}
-	public static void randomLink(int N, double p){
-		StdDraw.setScale(0, 100);
-		StdDraw.setPenRadius(0.01);
-		StdDraw.setPenColor(StdDraw.RED);
-		StdDraw.circle(50, 50, 50);
-		
-		StdDraw.setPenColor();
+
+	public static void randomLink2(int n, double p){
+		// 指定面板大小
+		StdDraw.setScale(0, 120);
+
+		// 绘制圆，圆心坐标为60，60
+		int radius = 50;
+		StdDraw.circle(60, 60, radius);
+
+		// 绘制点
+		StdDraw.setPenColor(Color.RED);
 		StdDraw.setPenRadius(0.05);
-		double[][] a = new double[N][2];
-		for(int i=0; i<N; i++){
-			a[i][0] = 50*(1 - Math.cos(2*Math.PI*i/N));
-			a[i][1] = 50*(1 + Math.sin(2*Math.PI*i/N));
-			StdDraw.point(a[i][0], a[i][1]);
+		double radian =  2 * Math.PI / n;
+		double[][] points = new double[n][2];
+		for (int i = 0; i < n; i++){
+			double x = 60 + Math.sin(i * radian) * radius;
+			double y = 60 - Math.cos(i * radian) * radius;
+			points[i] = new double[]{x, y};
+			StdDraw.point(x, y);
 		}
-		
-		StdDraw.setPenColor(StdDraw.BLUE);
-		StdDraw.setPenRadius(0.01);
-		for(int i=0; i<N; i++){
-			for(int j = i+1; j<N; j++){
-				if(StdRandom.bernoulli(p))
-					StdDraw.line(a[i][0], a[i][1], a[j][0], a[j][1]);
+
+		// 绘制连接线
+		StdDraw.setPenColor(Color.BLUE);
+		StdDraw.setPenRadius();
+		for (int i = 0; i < n; i++){
+			for (int j = i + 1; j < n; j++){
+				if (StdRandom.bernoulli(p)){
+					StdDraw.line(points[i][0], points[i][1], points[j][0], points[j][1]);
+				}
 			}
-			
 		}
 	}
+
 }
